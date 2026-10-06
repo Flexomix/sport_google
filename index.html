@@ -4,55 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram - Новости Футбола</title>
-    <!-- Подключаем Tailwind CSS для стилизации -->
+    <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Подключаем шрифт Inter для более точного соответствия -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #1a1e26 0%, #0d1016 100%);
+            /* Пункт 5: Более светлый и синий фон */
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
         }
     </style>
 </head>
-<body class="min-h-screen flex justify-center items-start py-8 px-4 text-white">
+<body class="min-h-screen flex justify-center items-start py-4 px-4 text-white">
 
-    <!-- Основной контейнер (макет мобильного экрана) -->
     <div class="w-full max-w-md">
 
         <!-- Шапка (Header) -->
-        <header class="flex justify-between items-center mb-8">
+        <!-- Пункт 6: Уменьшены отступы (py-3), добавлен отдельный цвет фона (bg-[#2d3b4e]) -->
+        <header class="flex justify-between items-center mb-6 py-3 px-5 bg-[#2d3b4e] rounded-2xl shadow-md">
             <div class="flex items-center gap-2">
-                <!-- Иконка Telegram -->
-                <div class="w-8 h-8 bg-[#2b9af3] rounded-full flex items-center justify-center shadow-lg">
-                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.546.26l.213-3.053 5.56-5.02c.24-.213-.054-.334-.373-.121l-6.87 4.32-2.97-.93c-.64-.2-.65-.64.14-.95l11.6-4.47c.53-.19.99.13.79.99z"/>
-                    </svg>
-                </div>
+                <!-- Пункт 1: Логотип Telegram теперь картинка -->
+                <!-- Вставьте свою ссылку в src="" -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="w-8 h-8 object-contain">
                 <span class="font-semibold text-lg">Telegram</span>
             </div>
             <!-- Кнопка Download -->
-            <button class="bg-[#2b9af3] hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl text-sm transition-colors shadow-md">
+            <button class="bg-[#2b9af3] hover:bg-blue-600 text-white font-semibold py-1.5 px-4 rounded-xl text-sm transition-colors shadow-md">
                 DOWNLOAD
             </button>
         </header>
 
         <!-- Карточка канала -->
-        <div class="bg-[#21262e] rounded-3xl p-5 shadow-2xl">
+        <div class="bg-[#1e293b] rounded-3xl p-5 shadow-2xl border border-slate-700/50">
 
             <!-- Верхняя часть: Аватар, название, подписчики -->
             <div class="text-center mb-6">
-                <!-- Аватар -->
-                <div class="w-20 h-20 bg-[#3a5a40] rounded-full mx-auto flex items-center justify-center border-4 border-[#21262e] shadow-md mb-3">
-                    <span class="text-4xl">⚽</span>
-                </div>
+                <!-- Пункт 2: Аватарка теперь картинка -->
+                <!-- Вставьте свою ссылку в src="" -->
+                <img src="https://i.pinimg.com/736x/8a/8b/9c/8a8b9c8a8b9c8a8b9c8a8b9c8a8b9c8a.jpg" alt="Channel Avatar" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-[#1e293b] shadow-md mb-3">
                 
                 <!-- Название -->
                 <div class="flex items-center justify-center gap-1.5 mb-1">
                     <h1 class="text-xl font-bold">BREAKING: Новости Футбола</h1>
-                    <!-- Синяя галочка -->
-                    <svg class="w-5 h-5 text-[#2b9af3]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.5l-4.5-4.5 1.41-1.41L10.5 14.67l7.59-7.59L19.5 8.5l-9 9z"/>
+                    <!-- Пункт 3: Правильная галочка верификации Telegram -->
+                    <svg class="w-5 h-5 text-[#2b9af3]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.5l-4.5-4.5 1.41-1.41L10.5 14.67l7.59-7.59L19.5 8.5l-9 9z" fill="#2b9af3"/>
+                        <path d="M12 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5z" fill="url(#paint0_linear)"/>
+                        <path d="M17.5 8.5l-7.59 7.59-3.41-3.41 1.41-1.41 2.0 2.0 6.18-6.18 1.41 1.41z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="12" y1="1.5" x2="12" y2="22.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2AABEE"/>
+                                <stop offset="1" stop-color="#229ED9"/>
+                            </linearGradient>
+                        </defs>
                     </svg>
                 </div>
 
@@ -74,11 +78,16 @@
                 <!-- Штрафные площади -->
                 <div class="absolute left-0 top-1/2 w-16 h-24 border-2 border-white/40 border-l-0 -translate-y-1/2 ml-3"></div>
                 <div class="absolute right-0 top-1/2 w-16 h-24 border-2 border-white/40 border-r-0 -translate-y-1/2 mr-3"></div>
-                <!-- Мяч -->
-                <div class="absolute right-[25%] top-[40%] w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <span class="text-xs">⚽</span>
+                <!-- Пункт 4: Мяч увеличен, убрана белая подложка -->
+                <div class="absolute right-[25%] top-[35%] text-4xl drop-shadow-lg">
+                    ⚽
                 </div>
             </div>
+
+            <!-- Пункт 7: Кнопка "Подписаться" в стиле START BOT -->
+            <button class="w-full bg-gradient-to-r from-[#2b9af3] to-[#1a73e8] hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3.5 px-6 rounded-full shadow-lg mb-6 transition-all transform hover:scale-[1.02]">
+                Подписаться
+            </button>
 
             <!-- Тег ТРАНСФЕРЫ -->
             <div class="mb-3">
