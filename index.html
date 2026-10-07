@@ -3,113 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram - Новости Футбола</title>
+    <title>Telegram - Lucky Yankee</title>
     <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            /* Основной фон страницы (холст) */
-            background: linear-gradient(180deg, #12161f 0%, #0a0d12 100%);
         }
     </style>
 </head>
-<body class="min-h-screen flex justify-center items-start text-white">
+<body class="min-h-screen flex flex-col items-center text-white bg-gradient-to-b from-[#12161f] to-[#0a0d12]">
 
-    <!-- Общий контейнер для мобильной версии -->
-    <div class="w-full max-w-md flex flex-col">
+    <!-- Шапка (Header) - Адаптивная, растягивается на всю ширину экрана -->
+    <header class="w-full bg-[#1a202c] py-4 px-6 flex justify-between items-center shadow-md">
+        <div class="flex items-center gap-3">
+            <!-- Логотип Telegram (Замените ссылку на свою) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="w-8 h-8 object-contain">
+            <span class="font-semibold text-lg">Telegram</span>
+        </div>
+        <!-- Кнопка Download (Ссылка) -->
+        <a href="#" class="bg-[#2b9af3] hover:bg-blue-600 text-white font-semibold py-1.5 px-5 rounded-xl text-sm transition-colors shadow-sm">
+            DOWNLOAD
+        </a>
+    </header>
 
-        <!-- Шапка (Header) - Без рамок, скруглений и тени, на всю ширину -->
-        <header class="flex justify-between items-center py-4 px-6 bg-[#1a202c] w-full">
-            <div class="flex items-center gap-3">
-                <!-- Логотип Telegram (Замените ссылку на свою) -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="w-8 h-8 object-contain">
-                <span class="font-semibold text-lg">Telegram</span>
-            </div>
-            <!-- Кнопка Download -->
-            <button class="bg-[#2b9af3] hover:bg-blue-600 text-white font-semibold py-1.5 px-5 rounded-xl text-sm transition-colors shadow-sm">
-                DOWNLOAD
-            </button>
-        </header>
+    <!-- Основной контент (Карточка канала) - Ограничена по ширине, отцентрирована -->
+    <div class="w-full max-w-md p-4 flex flex-col">
+        <div class="bg-[#222834] rounded-3xl p-5 shadow-2xl">
 
-        <!-- Основной контент (Карточка канала) - Убрана рамка, добавлен отступ сверху -->
-        <div class="px-4 py-5">
-            <div class="bg-[#222834] rounded-3xl p-5 shadow-2xl">
-
-                <!-- Верхняя часть: Аватар, название, подписчики -->
-                <div class="text-center mb-6">
-                    <!-- Аватарка (Замените ссылку на свою) -->
-                    <img src="https://i.ibb.co/4gj1YywT/8690adbc-fe8e-41fd-9ae2-7d9b54764d8a.jpg" alt="Channel Avatar" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-[#222834] shadow-md mb-4">
-                    
-                    <div class="flex items-center justify-center gap-1.5 mb-1">
-                        <h1 class="text-xl font-bold">Lucky Yankee ® | American Sport</h1>
-                        <!-- Правильная галочка верификации в виде звезды -->
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l2.4 2.4c.3.3.8.5 1.2.5h3.4c1.1 0 2 .9 2 2v3.4c0 .5.2.9.5 1.2l2.4 2.4c.8.8.8 2 0 2.8l-2.4 2.4c-.3.3-.5.8-.5 1.2v3.4c0 1.1-.9 2-2 2h-3.4c-.5 0-.9.2-1.2.5l-2.4 2.4c-.8.8-2 .8-2.8 0l-2.4-2.4c-.3-.3-.8-.5-1.2-.5H4c-1.1 0-2-.9-2-2v-3.4c0-.5-.2-.9-.5-1.2l-2.4-2.4c-.8-.8-.8-2 0-2.8l2.4-2.4c.3-.3.5-.8.5-1.2V6.8c0-1.1.9-2 2-2h3.4c.5 0 .9-.2 1.2-.5L12 2z" fill="#2b9af3"/>
-                            <path d="M16.5 9.5l-5.5 5.5-3-3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                    </div>
-
-                    <p class="text-gray-400 text-sm mb-3">24 320 подписчиков</p>
-
-                    <!-- Описание -->
-                    <p class="text-gray-300 text-sm leading-relaxed mb-5">
-                        Beating the books daily! 📊 62% win rate, +400 units, 9+ years of winning edges.
-                    </p>
-
-                    <!-- Кнопка "Подписаться" (Цвет как у DOWNLOAD, без градиента) -->
-                    <div class="flex justify-center">
-                        <button class="bg-[#2b9af3] hover:bg-blue-600 text-white font-bold py-3 px-10 rounded-full shadow-md transition-colors">
-                            Подписаться
-                        </button>
-                    </div>
+            <!-- Верхняя часть: Аватар, название, подписчики -->
+            <div class="text-center mb-6">
+                <!-- Аватарка (Замените ссылку на свою) -->
+                <img src="https://i.ibb.co/4gj1YywT/8690adbc-fe8e-41fd-9ae2-7d9b54764d8a.jpg" alt="Channel Avatar" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-[#222834] shadow-md mb-4">
+                
+                <div class="flex items-center justify-center gap-1.5 mb-1">
+                    <h1 class="text-xl font-bold">Lucky Yankee ® | American Sport</h1>
+                    <!-- ИСПРАВЛЕННАЯ Галочка верификации (Звезда с галочкой) -->
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.5 4.5L18 3.5L17 7L19.5 9.5L17 12L19.5 14.5L17 17L18 20.5L14.5 19.5L12 22L9.5 19.5L6 20.5L7 17L4.5 14.5L7 12L4.5 9.5L7 7L6 3.5L9.5 4.5L12 2Z" fill="#2b9af3"/>
+                        <path d="M10.5 16.5L7 13L8.5 11.5L10.5 13.5L15.5 8.5L17 10L10.5 16.5Z" fill="white"/>
+                    </svg>
                 </div>
 
-                <!-- Графика футбольного поля -->
-                <div class="relative w-full h-40 bg-[#2e6b30] rounded-2xl overflow-hidden mb-5 shadow-inner">
-                    <div class="absolute inset-3 border-2 border-white/40 rounded"></div>
-                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/40 -translate-x-1/2"></div>
-                    <div class="absolute left-1/2 top-1/2 w-24 h-24 border-2 border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                    <div class="absolute left-0 top-1/2 w-16 h-24 border-2 border-white/40 border-l-0 -translate-y-1/2 ml-3"></div>
-                    <div class="absolute right-0 top-1/2 w-16 h-24 border-2 border-white/40 border-r-0 -translate-y-1/2 mr-3"></div>
-                    <!-- Увеличенный мяч -->
-                    <div class="absolute right-[25%] top-[35%] text-4xl drop-shadow-lg">
-                        ⚽
-                    </div>
-                </div>
+                <p class="text-gray-400 text-sm mb-3">24 320 подписчиков</p>
 
-                <!-- Тег ТРАНСФЕРЫ -->
-                <div class="mb-3">
-                    <span class="bg-[#d32f2f] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
-                        Трансферы
-                    </span>
-                </div>
-
-                <!-- Заголовок статьи -->
-                <h2 class="text-lg font-bold mb-2 leading-tight">
-                    🚨 Сенсация на трансферном рынке
-                </h2>
-
-                <!-- Текст статьи -->
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                    Один из грандов Европы официально согласовал рекордную сделку лета. Источники, близкие к переговорам, раскрыли детали контракта и сумму отступных... 
-                    <span class="text-[#2b9af3] font-medium cursor-pointer hover:underline">
-                        Стало известно, какой клуб выкупил контракт Мбаппе! Читать продолжение в канале
-                    </span> 
-                    👇
+                <!-- Описание -->
+                <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                    Beating the books daily! 📊 62% win rate, +400 units, 9+ years of winning edges.
                 </p>
 
-                <!-- Просмотры -->
-                <div class="flex items-center gap-2 text-gray-500 text-xs">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                    </svg>
-                    <span>48,2K просмотров</span>
+                <!-- Кнопка "Подписаться" (Ссылка) -->
+                <div class="flex justify-center">
+                    <a href="#" class="bg-[#2b9af3] hover:bg-blue-600 text-white font-bold py-3 px-10 rounded-full shadow-md transition-colors">
+                        Подписаться
+                    </a>
                 </div>
-
             </div>
+
+            <!-- Графика футбольного поля -->
+            <div class="relative w-full h-40 bg-[#2e6b30] rounded-2xl overflow-hidden mb-5 shadow-inner">
+                <div class="absolute inset-3 border-2 border-white/40 rounded"></div>
+                <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/40 -translate-x-1/2"></div>
+                <div class="absolute left-1/2 top-1/2 w-24 h-24 border-2 border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute left-0 top-1/2 w-16 h-24 border-2 border-white/40 border-l-0 -translate-y-1/2 ml-3"></div>
+                <div class="absolute right-0 top-1/2 w-16 h-24 border-2 border-white/40 border-r-0 -translate-y-1/2 mr-3"></div>
+                <!-- Увеличенный мяч -->
+                <div class="absolute right-[25%] top-[35%] text-4xl drop-shadow-lg">
+                    ⚽
+                </div>
+            </div>
+
+            <!-- Тег ТРАНСФЕРЫ -->
+            <div class="mb-3">
+                <span class="bg-[#d32f2f] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                    Трансферы
+                </span>
+            </div>
+
+            <!-- Заголовок статьи -->
+            <h2 class="text-lg font-bold mb-2 leading-tight">
+                🚨 Сенсация на трансферном рынке
+            </h2>
+
+            <!-- Текст статьи -->
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Один из грандов Европы официально согласовал рекордную сделку лета. Источники, близкие к переговорам, раскрыли детали контракта и сумму отступных... 
+                <span class="text-[#2b9af3] font-medium cursor-pointer hover:underline">
+                    Стало известно, какой клуб выкупил контракт Мбаппе! Читать продолжение в канале
+                </span> 
+                👇
+            </p>
+
+            <!-- Просмотры -->
+            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                <span>48,2K просмотров</span>
+            </div>
+
         </div>
     </div>
 
